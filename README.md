@@ -19,19 +19,37 @@ This project uses a synthetic sales dataset containing 36 records across 12 mont
 
 - Python
 - Pandas
+- NumPy
 - Matplotlib
 - Seaborn
+- Unittest
 
 ## Project Features
 
 ### 1. Data Analysis
+
 - Create a Pandas DataFrame.
 - Inspect dataset information.
 - Check missing values.
 - Generate statistical summaries.
 - Analyze 36 sales records.
 
-### 2. Business Metrics
+### 2. Data Validation
+
+The project includes a reusable validation function to check:
+
+- Required dataset columns.
+- Empty datasets.
+- Missing values.
+- Duplicate records.
+- Valid month, product, and city names.
+- Valid numeric values.
+- Negative revenue, orders, and marketing expenses.
+- Whole number orders.
+- Valid discount percentages.
+
+### 3. Business Metrics
+
 - Total Revenue
 - Total Orders
 - Average Revenue
@@ -40,7 +58,7 @@ This project uses a synthetic sales dataset containing 36 records across 12 mont
 - Best Performing Product
 - Best Performing City
 
-### 3. Data Visualization
+### 4. Data Visualization
 
 The dashboard includes eight visualizations:
 
@@ -53,7 +71,7 @@ The dashboard includes eight visualizations:
 7. Product-wise Orders
 8. Discount vs Revenue
 
-### 4. Correlation Analysis
+### 5. Correlation Analysis
 
 A separate correlation heatmap is created to explore relationships between:
 
@@ -62,20 +80,29 @@ A separate correlation heatmap is created to explore relationships between:
 - Marketing
 - Discount
 
-### 5. Business Insights
+### 6. Business Insights
 
 The project identifies the best-performing month, product, and city based on revenue.
 
 It also calculates important sales metrics to help understand overall business performance.
 
+### 7. Automated Testing
+
+The project includes 15 automated tests using Python's Unittest framework.
+
+These tests check data validation, including valid data, empty datasets, missing values, duplicate records, invalid values, and other conditions.
+
 ## Project Structure
 
 ```text
-sales-visual-analytics-dashboard/
+Sales-Visual-Analytics-Dashboard/
 │
 ├── output/
 │   ├── sales_dashboard.png
 │   └── correlation_heatmap.png
+│
+├── tests/
+│   └── test_analysis.py
 │
 ├── main.py
 ├── README.md
@@ -98,7 +125,7 @@ sales-visual-analytics-dashboard/
 ### 1. Clone the Repository
 
 ```bash
-git https://github.com/JS-JUNAIDSALEEM/Sales-Visual-Analytics-Dashboard
+git clone https://github.com/JS-JUNAIDSALEEM/Sales-Visual-Analytics-Dashboard.git
 ```
 
 ### 2. Open the Project Folder
@@ -123,6 +150,16 @@ The program generates two visualization files:
 
 - `sales_dashboard.png`
 - `correlation_heatmap.png`
+
+## Running Automated Tests
+
+To run all 15 automated tests, use:
+
+```bash
+py -m unittest tests/test_analysis.py -v
+```
+
+The tests check different data validation conditions and make sure importing `main.py` does not automatically run the program.
 
 ## Dataset Information
 
@@ -150,6 +187,7 @@ Through this project, I practiced:
 - Pandas DataFrame operations.
 - Data inspection and statistical summaries.
 - GroupBy and aggregation.
+- Data validation and automated testing.
 - Data analysis and business metrics.
 - Matplotlib visualizations.
 - Seaborn charts and heatmaps.
@@ -165,6 +203,7 @@ Through this project, I practiced:
 
 ## Author
 
-**Junaid Saleem**
+### Junaid Saleem
 
-GitHub: [Add your GitHub profile link here](https://github.com/JS-JUNAIDSALEEM)
+- **GitHub:** [JS-JUNAIDSALEEM](https://github.com/JS-JUNAIDSALEEM)
+- **LinkedIn:** [Junaid Saleem](https://www.linkedin.com/in/junaid-saleem-developer/)

@@ -1,3 +1,4 @@
 pandas
+numpy
 matplotlib
-seaborn>=0.12
+seaborn
